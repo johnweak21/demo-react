@@ -21,9 +21,7 @@ function App() {
     <>
       <h1 className="treesell">各式木材販售</h1>
       <div className="GuideBar">
-        {/*<button className="Btn">首頁</button>*/}
-        {/*<button className="Btn">購物車</button>*/}
-        <button className="Btn" onClick={openModal}>
+        <button className="btn btn-secondary w-100" onClick={openModal}>
           聯絡人
         </button>
         {isModalOpen && (
@@ -45,30 +43,30 @@ function App() {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-12 col-md-4">
             <img className="img" src="/img/南方松.jpg" />
             <h1 className="ProductName">南方松 單價:100/支</h1>
           </div>
-          <div className="col">
+          <div className="col-12 col-md-4">
             <img className="img" src="/img/南洋櫸木木樑.jpg" />
             <h1 className="ProductName">南洋櫸木木樑 單價:200/支</h1>
           </div>
-          <div className="col">
+          <div className="col-12 col-md-4">
             <img className="img" src="/img/塑木.jpg" />
             <h1 className="ProductName">塑木 單價:150/支</h1>
           </div>
         </div>
         <br></br>
         <div className="row">
-          <div className="col">
+          <div className="col-12 col-md-4">
             <img className="img" src="/img/放射松木板.jpg" />
             <h1 className="ProductName">放射松木板 單價:50/支</h1>
           </div>
-          <div className="col">
+          <div className="col-12 col-md-4">
             <img className="img" src="/img/日本檜木壁板.jpg" />
             <h1 className="ProductName">日本檜木壁板 單價:80/支</h1>
           </div>
-          <div className="col">
+          <div className="col-12 col-md-4">
             <img className="img" src="/img/板模角材.jpg" />
             <h1 className="ProductName">板模角材 單價:250/支</h1>
           </div>
