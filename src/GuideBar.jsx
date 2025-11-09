@@ -1,8 +1,4 @@
 import { useState } from "react";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 const contact = {
   name: "吳先生",
   phone: "+1234567890",
@@ -41,5 +37,6 @@ function GuideBar() {
   );
 }
 export default GuideBar;
+
 
 
