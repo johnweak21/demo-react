@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GuideBar from "./GuideBar";
 const contact = {
   name: "吳先生",
