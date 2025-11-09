@@ -51,6 +51,12 @@ function CreateForm() {
     // 確保搜索字串已經去除多餘的空格並轉為小寫
     const searchTerm = search.trim().toLowerCase();
 
+    if (searchTerm === "") {
+      alert("請輸入商品名稱"); // 空字串直接提示
+      setSelectedProducts([]); // 清空之前搜尋結果
+      return;
+    }
+    
     // 使用正則表達式來對每個商品名稱進行匹配
     const foundProducts = productData.filter((product) =>
       product.name.toLowerCase().includes(searchTerm) // 不區分大小寫的過濾
@@ -167,3 +173,4 @@ function CreateForm() {
 }
 
 export default CreateForm;
+
