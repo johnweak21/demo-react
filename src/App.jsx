@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-
+import GuideBar from "./GuideBar";
 const contact = {
   name: "吳先生",
   phone: "+1234567890",
@@ -20,27 +20,7 @@ function App() {
   return (
     <>
       <h1 className="treesell">各式木材販售</h1>
-      <div className="GuideBar">
-        <button className="btn btn-secondary w-100" onClick={openModal}>
-          聯絡人
-        </button>
-        {isModalOpen && (
-          <div className="modal">
-            <div className="modal-content">
-              <h2>{contact.name}</h2>
-              <p>
-                <strong>電話:</strong> {contact.phone}
-              </p>
-              <p>
-                <strong>電子郵件:</strong> {contact.email}
-              </p>
-
-              {/* 關閉模態框的按鈕 */}
-              <button onClick={closeModal}>關閉</button>
-            </div>
-          </div>
-        )}
-      </div>
+      <GuideBar></GuideBar>
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-4">
