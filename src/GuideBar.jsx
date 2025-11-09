@@ -1,4 +1,8 @@
 import { useState } from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 const contact = {
   name: "吳先生",
   phone: "+1234567890",
@@ -14,7 +18,7 @@ function GuideBar() {
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <button className="btn btn-secondary w-100" style={{cursor:"pointer"}} onClick={openModal}>
+      <button className="btn btn-success cursor-not-allowed" onClick={openModal}>
         聯絡人
       </button>
              {isModalOpen && (
@@ -37,6 +41,3 @@ function GuideBar() {
   );
 }
 export default GuideBar;
-
-
-
