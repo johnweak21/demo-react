@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GuideBar from "./GuideBar";
+import CreateForm from "./CreateForm";
 
 const contact = {
   name: "吳先生",
@@ -25,6 +26,7 @@ function App() {
       <div className="container">
         <h1 className="display-5 text-light text-center fw-bold treesell">各式木材販售</h1>
         <GuideBar></GuideBar>
+        <CreateForm></CreateForm>
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
