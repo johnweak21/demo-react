@@ -35,10 +35,10 @@ const productData = [
   },
 ];
 
-function CreateForm() {
+function App() {
   // 定義 state 用於存儲用戶的搜索關鍵字和所選擇的商品
   const [search, setSearch] = useState(""); 
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProducts, setSelectedProducts] = useState([]); // 用來儲存所有符合條件的商品
 
   // 處理搜索框的輸入
   const handleSearchChange = (event) => {
@@ -47,20 +47,21 @@ function CreateForm() {
 
   // 處理搜索按鈕的點擊
   const handleSearchClick = () => {
-    const foundProduct = productData.find((product) =>
+    const foundProducts = productData.filter((product) =>
       product.name.toLowerCase().includes(search.toLowerCase()) // 不區分大小寫的過濾
     );
 
-    if (foundProduct) {
-      setSelectedProduct(foundProduct); // 找到商品後顯示商品彈窗
+    if (foundProducts.length > 0) {
+      setSelectedProducts(foundProducts); // 找到商品後顯示商品彈窗
     } else {
-      alert("沒有找到商品"); // 如果未找到商品，顯示提示
+      alert("沒有找到符合條件的商品"); // 如果未找到商品，顯示提示
+      setSelectedProducts([]); // 清空之前的搜尋結果
     }
   };
 
   // 關閉模態框
   const closeModal = () => {
-    setSelectedProduct(null); // 清空 selectedProduct，隱藏模態框
+    setSelectedProducts([]); // 清空選擇的商品，隱藏模態框
   };
 
   return (
@@ -82,8 +83,8 @@ function CreateForm() {
         </button>
       </div>
 
-      {/* 當選擇的商品不為 null 時顯示模態框 */}
-      {selectedProduct && (
+      {/* 當選擇的商品不為空，顯示模態框 */}
+      {selectedProducts.length > 0 && (
         <div
           className="modal fade show"
           style={{ display: "block", backgroundColor: "rgba(0,0,0,0.5)" }} // 顯示模態框並加上半透明背景
@@ -96,16 +97,23 @@ function CreateForm() {
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title" id="productModalLabel">
-                  {selectedProduct.name}
+                  搜尋結果
                 </h5>
               </div>
               <div className="modal-body">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  className="img-fluid mb-3" // 使圖片自適應，並增加下邊距
-                />
-                <p>單價: {selectedProduct.price}</p>
+                {/* 顯示所有符合條件的商品 */}
+                {selectedProducts.map((product, index) => (
+                  <div key={index} className="mb-3">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="img-fluid mb-3"
+                    />
+                    <h5>{product.name}</h5>
+                    <p>單價: {product.price}</p>
+                    <hr />
+                  </div>
+                ))}
               </div>
               <div className="modal-footer">
                 <button
@@ -124,4 +132,4 @@ function CreateForm() {
   );
 }
 
-export default CreateForm;
+export default App;
