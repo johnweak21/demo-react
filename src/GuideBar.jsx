@@ -14,7 +14,7 @@ function GuideBar() {
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <button className="btn btn-secondary w-100" onClick={openModal}>
+      <button className="btn btn-secondary w-100" style={{cursor:"pointer"}} onClick={openModal}>
         聯絡人
       </button>
              {isModalOpen && (
@@ -37,3 +37,4 @@ function GuideBar() {
   );
 }
 export default GuideBar;
+
