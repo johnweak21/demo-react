@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GuideBar from "./GuideBar";
+
 const contact = {
   name: "吳先生",
   phone: "+1234567890",
@@ -21,40 +22,66 @@ function App() {
 
   return (
     <>
-      <h1 className="treesell">各式木材販售</h1>
-      <GuideBar></GuideBar>
       <div className="container">
-        <div className="row">
-          <div className="col-12 col-md-4">
-            <img className="img" src="/img/南方松.jpg" />
-            <h1 className="display-5 text-center text-danger" style={{ fontSize: '2rem' }}>南方松<br></br>單價:100/支</h1>
+        <h1 className="display-5 text-light text-center fw-bold treesell">各式木材販售</h1>
+        <GuideBar></GuideBar>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-4">
+              <img className="img" src="/img/南方松.jpg" />
+              <h1
+                className="display-5 text-center text-danger ProductName"
+              >
+                南方松<br></br>單價:100/支
+              </h1>
+            </div>
+            <div className="col-12 col-md-4">
+              <img className="img" src="/img/南洋櫸木木樑.jpg" />
+              <h1
+                className="display-6 text-center text-danger ProductName"
+
+              >
+                南洋櫸木木樑<br></br>單價:200/支
+              </h1>
+            </div>
+            <div className="col-12 col-md-4">
+              <img className="img" src="/img/塑木.jpg" />
+              <h1
+                className="display-5 text-center text-danger ProductName"
+              >
+                塑木<br></br>單價:150/支
+              </h1>
+            </div>
           </div>
-          <div className="col-12 col-md-4">
-            <img className="img" src="/img/南洋櫸木木樑.jpg" />
-            <h1 className="display-5 text-center text-danger" style={{ fontSize: '2rem' }}>南洋櫸木木樑<br></br>單價:200/支</h1>
-          </div>
-          <div className="col-12 col-md-4">
-            <img className="img" src="/img/塑木.jpg" />
-            <h1 className="display-5 text-center text-danger" style={{ fontSize: '2rem' }}>塑木<br></br>單價:150/支</h1>
-          </div>
-        </div>
-        <br></br>
-        <div className="row">
-          <div className="col-12 col-md-4">
-            <img className="img" src="/img/放射松木板.jpg" />
-            <h1 className="display-5 text-center text-danger" style={{ fontSize: '2rem' }}>放射松木板<br></br>單價:50/支</h1>
-          </div>
-          <div className="col-12 col-md-4">
-            <img className="img" src="/img/日本檜木壁板.jpg" />
-            <h1 className="display-5 text-center text-danger" style={{ fontSize: '2rem' }}>日本檜木壁板<br></br>單價:80/支</h1>
-          </div>
-          <div className="col-12 col-md-4">
-            <img className="img" src="/img/板模角材.jpg" />
-            <h1 className="display-5 text-center text-danger" style={{ fontSize: '2rem' }}>板模角材<br></br>單價:250/支</h1>
+          <br></br>
+          <div className="row">
+            <div className="col-12 col-md-4">
+              <img className="img" src="/img/放射松木板.jpg" />
+              <h1
+                className="display-5 text-center text-danger ProductName"
+              >
+                放射松木板<br></br>單價:50/支
+              </h1>
+            </div>
+            <div className="col-12 col-md-4">
+              <img className="img" src="/img/日本檜木壁板.jpg" />
+              <h1
+                className="display-5 text-center text-danger ProductName"
+              >
+                日本檜木壁板<br></br>單價:80/支
+              </h1>
+            </div>
+            <div className="col-12 col-md-4">
+              <img className="img" src="/img/板模角材.jpg" />
+              <h1
+                className="display-5 text-center text-danger ProductName"
+              >
+                板模角材<br></br>單價:250/支
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-
       {/* 添加一些樣式 */}
       <style>
         {`
