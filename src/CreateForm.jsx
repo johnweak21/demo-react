@@ -24,8 +24,8 @@ const productData = [
     price: "50/支",
   },
   {
-    name: "日本檜木壁板",
-    image: "/img/日本檜木壁板.jpg",
+    name: "日檜壁板",
+    image: "/img/日檜壁板.jpg",
     price: "80/支",
   },
   {
@@ -48,8 +48,12 @@ function CreateForm() {
 
   // 處理搜索按鈕的點擊
   const handleSearchClick = () => {
+    // 確保搜索字串已經去除多餘的空格並轉為小寫
+    const searchTerm = search.trim().toLowerCase();
+
+    // 使用正則表達式來對每個商品名稱進行匹配
     const foundProducts = productData.filter((product) =>
-      product.name.toLowerCase().includes(search.toLowerCase()) // 不區分大小寫的過濾
+      product.name.toLowerCase().includes(searchTerm) // 不區分大小寫的過濾
     );
 
     if (foundProducts.length > 0) {
@@ -71,7 +75,7 @@ function CreateForm() {
   };
 
   return (
-    <div className="container" style={{ width: "250px", textAlign:"center" }}>
+    <div className="container" style={{ width: "250px", textAlign: "center" }}>
       {/* 搜索框：讓用戶輸入商品名稱 */}
       <div className="input-group mb-4">
         <input
@@ -108,7 +112,10 @@ function CreateForm() {
       {selectedProducts.length > 0 && (
         <div
           className="modal fade show"
-          style={{ display: "block", backgroundColor: "rgba(0,0,0,0.5)" }} // 顯示模態框並加上半透明背景
+          style={{
+            display: "block",
+            backgroundColor: "rgba(0,0,0,0.5)",
+          }} // 顯示模態框並加上半透明背景
           tabIndex="-1"
           role="dialog"
           aria-labelledby="productModalLabel"
@@ -121,7 +128,13 @@ function CreateForm() {
                   搜尋結果
                 </h5>
               </div>
-              <div className="modal-body">
+              <div
+                className="modal-body"
+                style={{
+                  maxHeight: "400px", // 設置最大高度
+                  overflowY: "auto",  // 讓內容可垂直滾動
+                }}
+              >
                 {/* 顯示選擇數量的商品 */}
                 {selectedProducts.slice(0, itemCount).map((product, index) => (
                   <div key={index} className="mb-3">
