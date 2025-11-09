@@ -3,22 +3,77 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #4075ca;
   color: white;
 }
+
 .treesell {
   background-color: #4075ca;
-  margin-bottom: 0px;
-}
-.img {
-  background-color: aquamarine;
-  width: 300px;
-  height: 300px;
-  padding: 30px;
-  border: 30px;
+  margin-bottom: 0px; /* 設置標題底部的間距 */
+  font-size: 2.5rem; /* 設置大螢幕時的字體大小 */
 }
 
 .ProductName {
+  margin-top: 10px; /* 商品名稱和圖片之間的上邊距 */
   font-size: 30px;
+  font-weight: bold; /* 設置商品名稱加粗 */
 }
+
+.custom-border {
+    border: 5px solid #eeff00; /* 黃色邊框 */
+    border-radius: 8px; /* 圓角邊框 */
+    padding: 5px; /* 內邊距，讓圖片和邊框之間有點距離 */
+    width: 300px;
+    height: 300px;
+  }
+
+  /* 小螢幕 (例如手機) 的字體大小調整 */
+  @media (max-width: 768px) {
+    .treesell {
+      font-size: 2rem; /* 小螢幕下縮小字體大小 */
+    }
+
+    .display-6 {
+      font-size: 1.5rem; /* 小螢幕下調整標題字體 */
+    }
+  }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+  z-index: 1001;
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+
