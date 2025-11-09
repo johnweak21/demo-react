@@ -27,27 +27,27 @@ function App() {
         <GuideBar></GuideBar>
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-4">
-              <img className="img" src="/img/南方松.jpg" />
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img className="custom-border img-fluid" src="/img/南方松.jpg" />
               <h1
-                className="display-5 text-center text-danger ProductName"
+                className="display-6 text-danger ProductName"
               >
                 南方松<br></br>單價:100/支
               </h1>
             </div>
-            <div className="col-12 col-md-4">
-              <img className="img" src="/img/南洋櫸木木樑.jpg" />
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img className="custom-border img-fluid" src="/img/南洋櫸木木樑.jpg" />
               <h1
-                className="display-6 text-center text-danger ProductName"
+                className="display-6 text-danger ProductName"
 
               >
                 南洋櫸木木樑<br></br>單價:200/支
               </h1>
             </div>
-            <div className="col-12 col-md-4">
-              <img className="img" src="/img/塑木.jpg" />
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img className="custom-border img-fluid" src="/img/塑木.jpg" />
               <h1
-                className="display-5 text-center text-danger ProductName"
+                className="display-6 text-danger ProductName"
               >
                 塑木<br></br>單價:150/支
               </h1>
@@ -55,26 +55,26 @@ function App() {
           </div>
           <br></br>
           <div className="row">
-            <div className="col-12 col-md-4">
-              <img className="img" src="/img/放射松木板.jpg" />
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img className="custom-border img-fluid" src="/img/放射松木板.jpg" />
               <h1
-                className="display-5 text-center text-danger ProductName"
+                className="display-6 text-danger ProductName"
               >
                 放射松木板<br></br>單價:50/支
               </h1>
             </div>
-            <div className="col-12 col-md-4">
-              <img className="img" src="/img/日本檜木壁板.jpg" />
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img className="custom-border img-fluid" src="/img/日本檜木壁板.jpg" />
               <h1
-                className="display-5 text-center text-danger ProductName"
+                className="display-6 text-danger ProductName"
               >
                 日本檜木壁板<br></br>單價:80/支
               </h1>
             </div>
-            <div className="col-12 col-md-4">
-              <img className="img" src="/img/板模角材.jpg" />
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img className="custom-border img-fluid" src="/img/板模角材.jpg" />
               <h1
-                className="display-5 text-center text-danger ProductName"
+                className="display-6 text-danger ProductName"
               >
                 板模角材<br></br>單價:250/支
               </h1>
