@@ -35,10 +35,11 @@ const productData = [
   },
 ];
 
-function App() {
-  // 定義 state 用於存儲用戶的搜索關鍵字和所選擇的商品
+function CreateForm() {
+  // 定義 state 用於存儲用戶的搜索關鍵字、所選擇的商品和顯示的商品數量
   const [search, setSearch] = useState(""); 
   const [selectedProducts, setSelectedProducts] = useState([]); // 用來儲存所有符合條件的商品
+  const [itemCount, setItemCount] = useState(3); // 控制顯示的商品數量，默認顯示三個
 
   // 處理搜索框的輸入
   const handleSearchChange = (event) => {
@@ -57,6 +58,11 @@ function App() {
       alert("沒有找到符合條件的商品"); // 如果未找到商品，顯示提示
       setSelectedProducts([]); // 清空之前的搜尋結果
     }
+  };
+
+  // 處理滑動條改變顯示數量
+  const handleSliderChange = (event) => {
+    setItemCount(Number(event.target.value)); // 設定顯示商品的數量
   };
 
   // 關閉模態框
@@ -83,6 +89,21 @@ function App() {
         </button>
       </div>
 
+      {/* 顯示滑動條來控制顯示商品數量 */}
+      {selectedProducts.length > 0 && (
+        <div className="mb-4">
+          <label>顯示商品數量: {itemCount}</label>
+          <input
+            type="range"
+            className="form-range"
+            min="1"
+            max={selectedProducts.length}
+            value={itemCount}
+            onChange={handleSliderChange} // 當滑動條改變時更新顯示商品數量
+          />
+        </div>
+      )}
+
       {/* 當選擇的商品不為空，顯示模態框 */}
       {selectedProducts.length > 0 && (
         <div
@@ -101,8 +122,8 @@ function App() {
                 </h5>
               </div>
               <div className="modal-body">
-                {/* 顯示所有符合條件的商品 */}
-                {selectedProducts.map((product, index) => (
+                {/* 顯示選擇數量的商品 */}
+                {selectedProducts.slice(0, itemCount).map((product, index) => (
                   <div key={index} className="mb-3">
                     <img
                       src={product.image}
@@ -132,4 +153,4 @@ function App() {
   );
 }
 
-export default App;
+export default CreateForm;
