@@ -24,8 +24,8 @@ const productData = [
     price: "50/支",
   },
   {
-    name: "日檜壁板",
-    image: "/img/日檜壁板.jpg",
+    name: "日本檜木壁板",
+    image: "/img/日本檜木壁板.jpg",
     price: "80/支",
   },
   {
@@ -39,7 +39,7 @@ function CreateForm() {
   // 定義 state 用於存儲用戶的搜索關鍵字、所選擇的商品和顯示的商品數量
   const [search, setSearch] = useState(""); 
   const [selectedProducts, setSelectedProducts] = useState([]); // 用來儲存所有符合條件的商品
-  const [itemCount, setItemCount] = useState(3); // 控制顯示的商品數量，默認顯示三個
+  const [itemCount, setItemCount] = useState(6); // 控制顯示的商品數量，默認顯示三個
 
   // 處理搜索框的輸入
   const handleSearchChange = (event) => {
@@ -173,4 +173,5 @@ function CreateForm() {
 }
 
 export default CreateForm;
+
 
