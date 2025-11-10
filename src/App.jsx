@@ -66,11 +66,11 @@ function App() {
               </h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
-              <img className="custom-border img-fluid" src="/img/日檜壁板.jpg" />
+              <img className="custom-border img-fluid" src="/img/日本檜木壁板.jpg" />
               <h1
                 className="display-6 text-danger ProductName"
               >
-                日檜壁板<br></br>單價:80/支
+                日本檜木壁板<br></br>單價:80/支
               </h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
