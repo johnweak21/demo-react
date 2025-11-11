@@ -6,40 +6,38 @@ const productData = [
   {
     name: "南方松",
     image: "/img/南方松.jpg",
-    price: "100/支",
   },
   {
     name: "南洋櫸木木樑",
     image: "/img/南洋櫸木木樑.jpg",
-    price: "200/支",
   },
   {
     name: "塑木",
     image: "/img/塑木.jpg",
-    price: "150/支",
   },
   {
     name: "放射松木板",
     image: "/img/放射松木板.jpg",
-    price: "50/支",
   },
   {
     name: "日本檜木壁板",
     image: "/img/日本檜木壁板.jpg",
-    price: "80/支",
   },
   {
     name: "板模角材",
     image: "/img/板模角材.jpg",
-    price: "250/支",
+  },
+   {
+    name: "夾板",
+    image: "/img/夾板.jpg",
   },
 ];
 
 function CreateForm() {
   // 定義 state 用於存儲用戶的搜索關鍵字、所選擇的商品和顯示的商品數量
-  const [search, setSearch] = useState(""); 
+  const [search, setSearch] = useState("");
   const [selectedProducts, setSelectedProducts] = useState([]); // 用來儲存所有符合條件的商品
-  const [itemCount, setItemCount] = useState(6); // 控制顯示的商品數量，默認顯示三個
+  const [itemCount, setItemCount] = useState(7); // 控制顯示的商品數量，默認顯示三個
 
   // 處理搜索框的輸入
   const handleSearchChange = (event) => {
@@ -56,10 +54,10 @@ function CreateForm() {
       setSelectedProducts([]); // 清空之前搜尋結果
       return;
     }
-    
+
     // 使用正則表達式來對每個商品名稱進行匹配
-    const foundProducts = productData.filter((product) =>
-      product.name.toLowerCase().includes(searchTerm) // 不區分大小寫的過濾
+    const foundProducts = productData.filter(
+      (product) => product.name.toLowerCase().includes(searchTerm) // 不區分大小寫的過濾
     );
 
     if (foundProducts.length > 0) {
@@ -138,7 +136,7 @@ function CreateForm() {
                 className="modal-body"
                 style={{
                   maxHeight: "400px", // 設置最大高度
-                  overflowY: "auto",  // 讓內容可垂直滾動
+                  overflowY: "auto", // 讓內容可垂直滾動
                 }}
               >
                 {/* 顯示選擇數量的商品 */}
@@ -150,7 +148,6 @@ function CreateForm() {
                       className="img-fluid mb-3"
                     />
                     <h5>{product.name}</h5>
-                    <p>單價: {product.price}</p>
                     <hr />
                   </div>
                 ))}
@@ -173,5 +170,3 @@ function CreateForm() {
 }
 
 export default CreateForm;
-
-
