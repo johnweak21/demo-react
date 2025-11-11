@@ -25,7 +25,7 @@ function App() {
     <>
       <div className="container">
         <h1 className="display-5 text-light text-center fw-bold treesell">
-          各式木材販售
+          東毅欣木材行
         </h1>
         <GuideBar></GuideBar>
         <CreateForm></CreateForm>
