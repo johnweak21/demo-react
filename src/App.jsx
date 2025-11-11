@@ -24,62 +24,59 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1 className="display-5 text-light text-center fw-bold treesell">各式木材販售</h1>
+        <h1 className="display-5 text-light text-center fw-bold treesell">
+          各式木材販售
+        </h1>
         <GuideBar></GuideBar>
         <CreateForm></CreateForm>
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
               <img className="custom-border img-fluid" src="/img/南方松.jpg" />
-              <h1
-                className="display-6 text-danger ProductName"
-              >
-                南方松<br></br>單價:100/支
-              </h1>
+              <h1 className="display-6 text-danger ProductName">南方松</h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
-              <img className="custom-border img-fluid" src="/img/南洋櫸木木樑.jpg" />
-              <h1
-                className="display-6 text-danger ProductName"
-
-              >
-                南洋櫸木木樑<br></br>單價:200/支
+              <img
+                className="custom-border img-fluid"
+                src="/img/南洋櫸木木樑.jpg"
+              />
+              <h1 className="display-6 text-danger ProductName">
+                南洋櫸木木樑
               </h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
               <img className="custom-border img-fluid" src="/img/塑木.jpg" />
-              <h1
-                className="display-6 text-danger ProductName"
-              >
-                塑木<br></br>單價:150/支
-              </h1>
+              <h1 className="display-6 text-danger ProductName">塑木</h1>
             </div>
           </div>
           <br></br>
           <div className="row">
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
-              <img className="custom-border img-fluid" src="/img/放射松木板.jpg" />
-              <h1
-                className="display-6 text-danger ProductName"
-              >
-                放射松木板<br></br>單價:50/支
+              <img
+                className="custom-border img-fluid"
+                src="/img/放射松木板.jpg"
+              />
+              <h1 className="display-6 text-danger ProductName">放射松木板</h1>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img
+                className="custom-border img-fluid"
+                src="/img/日本檜木壁板.jpg"
+              />
+              <h1 className="display-6 text-danger ProductName">
+                日本檜木壁板
               </h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
-              <img className="custom-border img-fluid" src="/img/日本檜木壁板.jpg" />
-              <h1
-                className="display-6 text-danger ProductName"
-              >
-                日本檜木壁板<br></br>單價:80/支
-              </h1>
+              <img
+                className="custom-border img-fluid"
+                src="/img/板模角材.jpg"
+              />
+              <h1 className="display-6 text-danger ProductName">板模角材</h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
-              <img className="custom-border img-fluid" src="/img/板模角材.jpg" />
-              <h1
-                className="display-6 text-danger ProductName"
-              >
-                板模角材<br></br>單價:250/支
-              </h1>
+              <img className="custom-border img-fluid" src="/img/夾板.jpg" />
+              <h1 className="display-6 text-danger ProductName">夾板</h1>
             </div>
           </div>
         </div>
