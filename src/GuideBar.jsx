@@ -5,8 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 const contact = {
   name: "吳先生",
-  phone: "+1234567890",
-  email: "sirwu@example.com",
+  phone: "0932960255",
+  line: "0932960255",
 };
 function GuideBar() {
   // 控制模態框顯示與否的狀態
@@ -29,7 +29,7 @@ function GuideBar() {
                 <strong>電話:</strong> {contact.phone}
               </p>
               <p>
-                <strong>電子郵件:</strong> {contact.email}
+                <strong>line:</strong> {contact.line}
               </p>
 
               {/* 關閉模態框的按鈕 */}
@@ -41,3 +41,4 @@ function GuideBar() {
   );
 }
 export default GuideBar;
+
