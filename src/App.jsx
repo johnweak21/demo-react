@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GuideBar from "./GuideBar";
 import CreateForm from "./CreateForm";
+import BackToTopButton from "./BackToTopButton";
 
 const contact = {
   name: "吳先生",
@@ -29,6 +30,7 @@ function App() {
         </h1>
         <GuideBar></GuideBar>
         <CreateForm></CreateForm>
+        <BackToTopButton></BackToTopButton>
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
@@ -40,9 +42,7 @@ function App() {
                 className="custom-border img-fluid"
                 src="/img/南洋櫸木木樑.jpg"
               />
-              <h1 className="display-6 text-danger ProductName">
-                南洋櫸木木樑
-              </h1>
+              <h1 className="display-6 text-danger ProductName">南洋櫸木木樑</h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
               <img className="custom-border img-fluid" src="/img/塑木.jpg" />
@@ -63,9 +63,7 @@ function App() {
                 className="custom-border img-fluid"
                 src="/img/日本檜木壁板.jpg"
               />
-              <h1 className="display-6 text-danger ProductName">
-                日本檜木壁板
-              </h1>
+              <h1 className="display-6 text-danger ProductName">日本檜木壁板</h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
               <img
@@ -75,8 +73,32 @@ function App() {
               <h1 className="display-6 text-danger ProductName">板模角材</h1>
             </div>
             <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
-              <img className="custom-border img-fluid" src="/img/夾板.jpg" />
+              <img 
+                className="custom-border img-fluid" 
+                src="/img/夾板.jpg"
+              />
               <h1 className="display-6 text-danger ProductName">夾板</h1>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img 
+                className="custom-border img-fluid" 
+                src="/img/鐵杉角材.jpg"
+              />
+              <h1 className="display-6 text-danger ProductName">鐵杉角材</h1>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img 
+                className="custom-border img-fluid" 
+                src="/img/美國舊枕木.jpg"
+              />
+              <h1 className="display-6 text-danger ProductName">美國舊枕木</h1>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <img 
+                className="custom-border img-fluid" 
+                src="/img/歐洲紅松.jpg"
+              />
+              <h1 className="display-6 text-danger ProductName">歐洲紅松</h1>
             </div>
           </div>
         </div>
