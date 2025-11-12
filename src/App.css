@@ -13,6 +13,7 @@ body {
   background-color: #4075ca;
   margin-bottom: 0px; /* 設置標題底部的間距 */
   font-size: 2.5rem; /* 設置大螢幕時的字體大小 */
+  color: white;
 }
 
 .ProductName {
